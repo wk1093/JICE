@@ -1,0 +1,20 @@
+{
+    "data": {
+        "author": "Banana",
+        "content": {
+            "asset_path": "assets",
+            "scene_path": "scenes",
+            "script_path": "scripts"
+        },
+        "description": "This is a test project",
+        "id": "my_test_proj",
+        "name": "My Test Project",
+        "splash_screen": {
+            "enabled": true,
+            "image": "splash.png"
+        },
+        "version": "1.0.0"
+    },
+    "data_id": 0,
+    "engine_version": 100
+}

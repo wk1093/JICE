@@ -1,0 +1,5 @@
+.idea/
+cmake-build-*/
+CmakeBuild/
+projects/*/build/
+*.bak

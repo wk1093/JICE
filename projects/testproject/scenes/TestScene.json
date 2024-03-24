@@ -1,0 +1,123 @@
+{
+    "data": {
+        "3d": false,
+        "content": [
+            {
+                "attributes": [
+                    {
+                        "data": {
+                            "position": [
+                                0.10000000149011612,
+                                0.0,
+                                0.0
+                            ],
+                            "rotation": [
+                                0.0,
+                                0.0,
+                                0.0
+                            ],
+                            "scale": [
+                                1.0,
+                                1.0,
+                                1.0
+                            ]
+                        },
+                        "id": "transform",
+                        "type": "builtin"
+                    },
+                    {
+                        "data": {
+                            "image": "test.png"
+                        },
+                        "id": "image2d",
+                        "type": "builtin"
+                    },
+                    {
+                        "data": {},
+                        "location": "TestScript",
+                        "type": "script"
+                    }
+                ],
+                "children": [
+                    {
+                        "attributes": [
+                            {
+                                "data": {
+                                    "position": [
+                                        0.0,
+                                        0.0,
+                                        0.0
+                                    ],
+                                    "rotation": [
+                                        0.0,
+                                        0.0,
+                                        0.0
+                                    ],
+                                    "scale": [
+                                        1.0,
+                                        1.0,
+                                        1.0
+                                    ]
+                                },
+                                "id": "transform",
+                                "type": "builtin"
+                            },
+                            {
+                                "data": {
+                                    "image": "test.png"
+                                },
+                                "id": "image2d",
+                                "type": "builtin"
+                            },
+                            {
+                                "data": {},
+                                "location": "TestScript",
+                                "type": "script"
+                            }
+                        ],
+                        "children": [],
+                        "id": "TestObj2"
+                    }
+                ],
+                "id": "TestObj"
+            },
+            {
+                "attributes": [
+                    {
+                        "data": {
+                            "position": [
+                                0.0,
+                                0.0,
+                                0.0
+                            ],
+                            "rotation": [
+                                0.0,
+                                0.0,
+                                0.0
+                            ],
+                            "scale": [
+                                1.0,
+                                1.0,
+                                1.0
+                            ]
+                        },
+                        "id": "transform",
+                        "type": "builtin"
+                    },
+                    {
+                        "data": {
+                            "image": "test.png"
+                        },
+                        "id": "image2d",
+                        "type": "builtin"
+                    }
+                ],
+                "children": [],
+                "id": "TestObj3"
+            }
+        ],
+        "name": "TestScene"
+    },
+    "data_id": 1,
+    "engine_version": 100
+}
