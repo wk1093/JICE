@@ -1,6 +1,7 @@
+#include "Image2d.h"
+
 #include <iostream>
 #include "Engine/internal/RenderTask.h"
-#include "Image2d.h"
 #include "Transform.h"
 #include "Engine/internal/Engine.h"
 
@@ -19,8 +20,9 @@ namespace jice {
             2, 3, 0
     };
 
-    Image2d::Image2d(AttributeData data, bool create_buffer) : AttributeInterface(data) {
+    Image2d::Image2d(AttributeData data, bool create_buffer, const std::string& shader) : AttributeInterface(data) {
         image = "";
+        this->shader = shader;
         if (data.find("image") != data.end()) {
             if (data["image"].type == AttrDataType::String) {
                 image = data["image"].s;
@@ -53,13 +55,12 @@ namespace jice {
             auto *t = (Transform *) obj->getComponent(Transform);
             RenderTask task;
             task.texture = image;
-            task.shader = "default_3f2f_pt";
+            task.shader = shader;
             task.obj = &this->b_obj;
             task.mode = GL_TRIANGLES;
             task.simple = false;
             task.model = t->toModel();
             e->addRenderTask(task);
-            // todo: add transform
         } else {
             std::cout << "No transform component found" << std::endl;
         }

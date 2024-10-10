@@ -7,6 +7,7 @@ public:
     Transform* transform;
 
     explicit TestScript(Engine* e, GameObject* o) : ScriptInterface(e, o) {
+
     }
 
 

@@ -39,6 +39,8 @@ add_library(Engine STATIC Engine/internal/Asset.cpp Engine/internal/Asset.h
         Engine/internal/RenderTask.h
         Engine/util/Popup.h
         Engine/util/Popup.cpp
+        Engine/builtin/Square.h
+        Engine/builtin/Square.cpp
 )
 
 target_link_libraries(Engine PUBLIC eogll Boxer)
