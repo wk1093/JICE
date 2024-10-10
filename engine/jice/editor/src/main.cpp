@@ -103,7 +103,7 @@ int main() {
 
     MenuManager mm;
 
-    JiceProject jp("C:/Users/wyatt/Desktop/structure/projects/testproject/proj.json");
+    JiceProject jp("../../../projects/testproject/proj.json");
 
 
     auto nm = new NavigatorMenu(jp.m_scenes[0]);

@@ -34,5 +34,25 @@ namespace jice {
         }
     }
 
+    void Square::Update(Engine *e, GameObject *obj) {
+        if (obj->hasComponent(Transform)) {
+            auto *t = (Transform *) obj->getComponent(Transform);
+            RenderTask task;
+            task.shader = shader;
+            task.obj = &this->b_obj;
+            task.mode = GL_TRIANGLES;
+            task.simple = false;
+            task.model = t->toModel();
+            e->addRenderTask(task);
+        } else {
+            std::cout << "No transform component found" << std::endl;
+        }
+
+    }
+
+    std::vector<std::string> Square::getDependencies() {
+        return {Transform::COMPONENT_NAME};
+    }
+
 
 }
