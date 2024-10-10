@@ -106,7 +106,6 @@ class Jice:
         self.build = build
         self.var_count = 0
         self.sources = []
-        self.scrloc = os.path.dirname(os.path.realpath(__file__))
         self.comp_assets = []
         self.copy_assets = []
         print(f"Compiling project: '{proj}', to '{build}'")

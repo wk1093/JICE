@@ -4,19 +4,16 @@
 #include "Engine/internal/Object.h"
 
 namespace jice {
-
-    class Image2d : public AttributeInterface {
+    class Square : public AttributeInterface {
     public:
         static const std::string COMPONENT_NAME;
-        std::string image;
         EogllBufferObject b_obj{};
         std::string shader;
 
-        explicit Image2d(AttributeData data, bool create_buffer = true, const std::string& shader="default_3f2f_pt");
+        explicit Square(AttributeData data, bool create_buffer = true, const std::string& shader="default_3f_p");
 
         void Update(Engine *e, GameObject *obj) override;
 
         std::vector<std::string> getDependencies() override;
     };
-
 }

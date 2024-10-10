@@ -107,6 +107,12 @@ public:
 
         if (ImGui::BeginMenuBar()) {
             if (ImGui::BeginMenu("File")) {
+                if (ImGui::MenuItem("Run")) {
+                    ImGui::EndMenu();
+                    ImGui::EndMenuBar();
+                    ImGui::End();
+                    return {MenuResult::Run};
+                }
                 if (ImGui::MenuItem("Exit")) {
                     ImGui::EndMenu();
                     ImGui::EndMenuBar();

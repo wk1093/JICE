@@ -120,12 +120,14 @@ int main() {
     // 4 = done
     // 0 = normal
 
-    while (!eogllWindowShouldClose(window)) {
+    bool running = true;
+
+    while (running) {
         updateUI();
 
         mm.update();
         MenuResult mr = mm.draw();
-        if (mr.m_result == MenuResult::Exit) {
+        if (mr.m_result == MenuResult::Run) {
             workThread = std::thread([&jp, &state](){
                 state = 1;
                 jp.save();
@@ -138,6 +140,9 @@ int main() {
                 }
                 state = 4;
             });
+        }
+        if (mr.m_result == MenuResult::Exit) {
+            running = false;
         }
         static ImGuiWindowFlags popupFlags = ImGuiWindowFlags_AlwaysAutoResize | ImGuiWindowFlags_NoMove | ImGuiWindowFlags_NoResize;
         if (state == 1) {
@@ -163,6 +168,11 @@ int main() {
                 workThread.join();
             }
             state = 0;
+        }
+
+        if (eogllWindowShouldClose(window)) {
+            // TODO: popup to ask if you want to save the project
+            running = false;
         }
 
         drawUI(window);
